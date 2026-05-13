@@ -1,5 +1,18 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+// import "assets/images";
+
+import robovacImagex1 from './assets/images/robovac-x1.png';
+import robovacImagex2 from './assets/images/robovac-x2.png';
+import robovacImagex3 from './assets/images/robovac-x3.png';
+import robovacImagex4 from './assets/images/robovac-x4.png';
+import robovacImagex5 from './assets/images/robovac-x5.png';
+import robovacImagex6 from './assets/images/robovac-x6.png';
+import robovacImagex7 from './assets/images/robovac-x7.png';
+import robovacImagex8 from './assets/images/robovac-x8.png';
+import robovacImagex9 from './assets/images/robovac-x9.png';
+import robovacImagex10 from './assets/images/hero3.webp';
+
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -18,7 +31,7 @@ function App() {
       description:
         "Smart vacuum cleaner with AI navigation and 3000Pa suction power. Auto-recharge and scheduling features.",
       image:
-        "/assets/images/robovac-x1.png",
+        robovacImagex1
     },
     {
       id: 2,
@@ -27,7 +40,7 @@ function App() {
       description:
         "Mopping and sweeping robot with 4-in-1 cleaning system. Perfect for hardwood and tile floors.",
       image:
-        "https://images.unsplash.com/photo-1629709305580-5a833dc72d5a?w=400",
+        robovacImagex2,
     },
     {
       id: 3,
@@ -36,7 +49,7 @@ function App() {
       description:
         "Magnetic window cleaning robot for high-rise buildings. Safe and efficient glass cleaning.",
       image:
-        "https://images.unsplash.com/photo-1585771724687-ef69fbc95adc?w=400",
+        robovacImagex3,
     },
 
     // Logistics Robots
@@ -47,7 +60,7 @@ function App() {
       description:
         "Autonomous forklift robot capable of lifting 2000kg. Perfect for warehouse operations.",
       image:
-        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400",
+        robovacImagex4,
     },
     {
       id: 5,
@@ -56,7 +69,7 @@ function App() {
       description:
         "Delivery drone with 10km range and 5kg capacity. GPS navigation and collision avoidance.",
       image:
-        "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=400",
+        robovacImagex5,
     },
     {
       id: 6,
@@ -65,7 +78,7 @@ function App() {
       description:
         "High-speed parcel sorting robot with 100 packages per minute processing rate.",
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400",
+        robovacImagex6,
     },
 
     // Industry Robots
@@ -76,7 +89,7 @@ function App() {
       description:
         "Industrial robotic arm with 6-axis movement and 100kg payload capacity for manufacturing.",
       image:
-        "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400",
+        robovacImagex7,
     },
     {
       id: 8,
@@ -85,7 +98,7 @@ function App() {
       description:
         "Precision welding robot for automotive and metal fabrication industries.",
       image:
-        "https://images.unsplash.com/photo-1581092335871-4d9adfadf992?w=400",
+        robovacImagex8,
     },
     {
       id: 9,
@@ -94,7 +107,7 @@ function App() {
       description:
         "High-speed assembly robot for electronics and small parts manufacturing.",
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400",
+        robovacImagex9,
     },
 
     // Healthcare Robots
@@ -143,7 +156,7 @@ function App() {
       description:
         "Food delivery robot that can carry up to 4 trays at once to restaurant tables.",
       image:
-        "https://images.unsplash.com/photo-1581092335871-4d9adfadf992?w=400",
+        robovacImagex2,
     },
     {
       id: 15,
@@ -151,7 +164,7 @@ function App() {
       category: "Catering",
       description:
         "Automated bartender robot that can mix over 200 cocktails perfectly every time.",
-      image: "https://images.unsplash.com/photo-1563206767-5b18f218eb20?w=400",
+      image: robovacImagex3,
     },
   ];
 
@@ -176,7 +189,7 @@ function App() {
       <section className="hero">
         <div className="hero__bg">
           <img
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1600"
+            src={robovacImagex10}
             alt="Robotics"
           />
           <div className="hero__overlay" />
@@ -185,7 +198,7 @@ function App() {
         <div className="hero__content">
           <div className="hero__tag">Advanced Robotics Solutions</div>
           <h1 className="hero__title">
-            <span>🤖</span> Robotics
+            <span></span> Robotics
             <br />
             Catalog
           </h1>
@@ -194,7 +207,7 @@ function App() {
           </p>
           <div className="hero__stats">
             <div className="hero__stat">
-              <strong>15+</strong>
+              <strong>20+</strong>
               <span>Models</span>
             </div>
             <div className="hero__divider" />
@@ -218,7 +231,7 @@ function App() {
       {/* CATALOG SECTION */}
       <section className="catalog">
         <div className="catalog__header">
-          <div className="catalog__label">Product Lineup</div>
+          {/* <div className="catalog__label">Product Lineup</div> */}
           <h2 className="catalog__title">Browse by Category</h2>
         </div>
 
