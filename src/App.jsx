@@ -1,18 +1,26 @@
+import NewsletterPage from "./pages/newsletter.jsx";
+import { Routes, Route } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
 // import "assets/images";
 
-import robovacImagex1 from './assets/images/robovac-x1.png';
-import robovacImagex2 from './assets/images/robovac-x2.png';
-import robovacImagex3 from './assets/images/robovac-x3.png';
-import robovacImagex4 from './assets/images/robovac-x4.png';
-import robovacImagex5 from './assets/images/robovac-x5.png';
-import robovacImagex6 from './assets/images/robovac-x6.png';
-import robovacImagex7 from './assets/images/robovac-x7.png';
-import robovacImagex8 from './assets/images/robovac-x8.png';
-import robovacImagex9 from './assets/images/robovac-x9.png';
-import robovacImagex10 from './assets/images/hero3.webp';
-
+import robovacImagex1 from "./assets/images/robovac-x1.png";
+import robovacImagex2 from "./assets/images/robovac-x2.png";
+import robovacImagex3 from "./assets/images/robovac-x3.png";
+import robovacImagex4 from "./assets/images/robovac-x4.png";
+import robovacImagex5 from "./assets/images/robovac-x5.png";
+import robovacImagex6 from "./assets/images/robovac-x6.png";
+import robovacImagex7 from "./assets/images/robovac-x7.png";
+import robovacImagex8 from "./assets/images/robovac-x8.png";
+import robovacImagex9 from "./assets/images/robovac-x9.png";
+import robovacImagex10 from "./assets/images/hero3.webp";
+import robovacImagex11 from "./assets/images/robot1.png";
+import robovacImagex12 from "./assets/images/robot2.png";
+import robovacImagex13 from "./assets/images/robot3.png";
+import robovacImagex14 from "./assets/images/robot4.png";
+import robovacImagex15 from "./assets/images/robot5.png";
+import robovacImagex16 from "./assets/images/robot6.png";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -30,17 +38,16 @@ function App() {
       category: "Cleaning",
       description:
         "Smart vacuum cleaner with AI navigation and 3000Pa suction power. Auto-recharge and scheduling features.",
-      image:
-        robovacImagex1
+      image: robovacImagex1,
     },
+
     {
       id: 2,
       name: "FloorBot Pro",
       category: "Cleaning",
       description:
         "Mopping and sweeping robot with 4-in-1 cleaning system. Perfect for hardwood and tile floors.",
-      image:
-        robovacImagex2,
+      image: robovacImagex2,
     },
     {
       id: 3,
@@ -48,8 +55,7 @@ function App() {
       category: "Cleaning",
       description:
         "Magnetic window cleaning robot for high-rise buildings. Safe and efficient glass cleaning.",
-      image:
-        robovacImagex3,
+      image: robovacImagex3,
     },
 
     // Logistics Robots
@@ -59,8 +65,7 @@ function App() {
       category: "Logistics",
       description:
         "Autonomous forklift robot capable of lifting 2000kg. Perfect for warehouse operations.",
-      image:
-        robovacImagex4,
+      image: robovacImagex14,
     },
     {
       id: 5,
@@ -68,8 +73,7 @@ function App() {
       category: "Logistics",
       description:
         "Delivery drone with 10km range and 5kg capacity. GPS navigation and collision avoidance.",
-      image:
-        robovacImagex5,
+      image: robovacImagex15,
     },
     {
       id: 6,
@@ -77,8 +81,7 @@ function App() {
       category: "Logistics",
       description:
         "High-speed parcel sorting robot with 100 packages per minute processing rate.",
-      image:
-        robovacImagex6,
+      image: robovacImagex6,
     },
 
     // Industry Robots
@@ -88,8 +91,7 @@ function App() {
       category: "Industry",
       description:
         "Industrial robotic arm with 6-axis movement and 100kg payload capacity for manufacturing.",
-      image:
-        robovacImagex7,
+      image: robovacImagex7,
     },
     {
       id: 8,
@@ -97,8 +99,7 @@ function App() {
       category: "Industry",
       description:
         "Precision welding robot for automotive and metal fabrication industries.",
-      image:
-        robovacImagex8,
+      image: robovacImagex8,
     },
     {
       id: 9,
@@ -106,8 +107,7 @@ function App() {
       category: "Industry",
       description:
         "High-speed assembly robot for electronics and small parts manufacturing.",
-      image:
-        robovacImagex9,
+      image: robovacImagex9,
     },
 
     // Healthcare Robots
@@ -117,8 +117,7 @@ function App() {
       category: "Healthcare",
       description:
         "Medical assistant robot for patient monitoring and medicine delivery in hospitals.",
-      image:
-        "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400",
+      image: robovacImagex11,
     },
     {
       id: 11,
@@ -126,17 +125,16 @@ function App() {
       category: "Healthcare",
       description:
         "Surgical robot with 0.1mm precision for minimally invasive procedures.",
-      image:
-        "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=400",
+      image: robovacImagex12,
     },
+
     {
       id: 12,
       name: "Rehab Walker",
       category: "Healthcare",
       description:
         "Rehabilitation robot for physical therapy and mobility training.",
-      image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400",
+      image: robovacImagex12,
     },
 
     // Catering Robots
@@ -146,8 +144,7 @@ function App() {
       category: "Catering",
       description:
         "Automated cooking robot with 1000+ recipes. Perfect for restaurants and catering services.",
-      image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400",
+      image: robovacImagex13,
     },
     {
       id: 14,
@@ -155,8 +152,7 @@ function App() {
       category: "Catering",
       description:
         "Food delivery robot that can carry up to 4 trays at once to restaurant tables.",
-      image:
-        robovacImagex2,
+      image: robovacImagex4,
     },
     {
       id: 15,
@@ -164,7 +160,7 @@ function App() {
       category: "Catering",
       description:
         "Automated bartender robot that can mix over 200 cocktails perfectly every time.",
-      image: robovacImagex3,
+      image: robovacImagex5,
     },
   ];
 
@@ -185,13 +181,18 @@ function App() {
 
   return (
     <div className={`app ${visible ? "app--visible" : ""}`}>
+      <div>
+        <nav>
+          <Link to="/">Home</Link> | 
+          <Link to="/newsletter">NewsletterPage</Link>
+        </nav>
+
+        <Outlet />
+      </div>
       {/* HERO */}
       <section className="hero">
         <div className="hero__bg">
-          <img
-            src={robovacImagex10}
-            alt="Robotics"
-          />
+          <img src={robovacImagex10} alt="Robotics" />
           <div className="hero__overlay" />
           <div className="hero__grid-lines" />
         </div>
@@ -288,10 +289,11 @@ function App() {
                 </span>
               </div>
               <div className="robot-card__body">
-                <h3 className="robot-card__name">{robot.name}</h3>
+                
+              <h3 className="robot-card__name">{robot.name}</h3>
                 <p className="robot-card__desc">{robot.description}</p>
                 <div className="robot-card__footer">
-                  <button className="robot-card__btn">View Details →</button>
+                  <button className="robot-card__btn">Learn More →</button>
                 </div>
               </div>
               <div

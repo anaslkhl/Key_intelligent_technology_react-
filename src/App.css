@@ -1,5 +1,3 @@
-
-
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap");
 
 /* ── RESET & BASE ─────────────────────────────────────── */
@@ -314,7 +312,7 @@ body {
 .robot-card {
   position: relative;
   background: var(--white);
-  border: 1.5px solid var(--border);
+  /* border: 1.5px solid var(--border); */
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
@@ -323,6 +321,49 @@ body {
     box-shadow var(--transition),
     border-color var(--transition);
   animation: cardIn 0.55s both;
+}
+
+.robot-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Title */
+.robot-card__name {
+  transition: transform 0.35s ease;
+}
+
+/* Description */
+.robot-card__desc {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity 0.35s ease,
+    max-height 0.35s ease,
+    transform 0.35s ease;
+}
+
+/* Button */
+.robot-card__footer {
+  transition: transform 0.35s ease;
+}
+
+/* Hover effects */
+.robot-card:hover .robot-card__name {
+  transform: translateY(-8px);
+}
+
+.robot-card:hover .robot-card__desc {
+  opacity: 1;
+  max-height: 100px;
+  transform: translateY(0);
+}
+
+.robot-card:hover .robot-card__footer {
+  transform: translateY(8px);
 }
 
 @keyframes cardIn {
@@ -336,11 +377,11 @@ body {
   }
 }
 
-.robot-card:hover {
+/* .robot-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
   border-color: transparent;
-}
+} */
 
 /* Glow on hover */
 .robot-card__glow {
@@ -348,23 +389,31 @@ body {
   inset: -1px;
   border-radius: inherit;
   background: transparent;
-  border: 1.5px solid transparent;
+  /* border: 1.5px solid transparent; */
   pointer-events: none;
   transition:
     border-color 0.35s,
     box-shadow 0.35s;
 }
-.robot-card:hover .robot-card__glow {
+/* .robot-card:hover .robot-card__glow {
   border-color: color-mix(in srgb, var(--glow-color) 60%, transparent);
   box-shadow: 0 0 24px -4px
     color-mix(in srgb, var(--glow-color) 40%, transparent);
+} */
+
+/* .robot-card__desc {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+.robot-card:hover .robot-card__desc {
+  opacity: 1;
+} */
 /* Image */
 .robot-card__image-wrap {
   position: relative;
   overflow: hidden;
-  height: 210px;
+  height: 360px;
 }
 
 .robot-card__image {
@@ -380,7 +429,7 @@ body {
 .robot-card__image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 60%);
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, transparent 60%); */
   opacity: 0;
   transition: opacity 0.35s;
 }
