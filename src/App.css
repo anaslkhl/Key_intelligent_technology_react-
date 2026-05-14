@@ -324,47 +324,59 @@ body {
 }
 
 .robot-card__body {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  overflow: hidden;
 }
 
 /* Title */
 .robot-card__name {
   transition: transform 0.35s ease;
+  z-index: 2;
 }
 
 /* Description */
 .robot-card__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 85%;
+
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(10px);
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
   transition:
     opacity 0.35s ease,
-    max-height 0.35s ease,
     transform 0.35s ease;
 }
 
 /* Button */
 .robot-card__footer {
   transition: transform 0.35s ease;
+  z-index: 2;
+}
+
+/* Hover */
+.robot-card:hover .robot-card__name {
+  transform: translateY(-18px);
+}
+
+
+.robot-card:hover .robot-card__footer {
+  transform: translateY(30px);
 }
 
 /* Hover effects */
-.robot-card:hover .robot-card__name {
-  transform: translateY(-8px);
-}
 
-.robot-card:hover .robot-card__desc {
-  opacity: 1;
-  max-height: 100px;
-  transform: translateY(0);
-}
 
-.robot-card:hover .robot-card__footer {
-  transform: translateY(8px);
-}
 
 @keyframes cardIn {
   from {
@@ -404,11 +416,11 @@ body {
 /* .robot-card__desc {
   opacity: 0;
   transition: opacity 0.3s ease;
-}
+}*/
 
 .robot-card:hover .robot-card__desc {
   opacity: 1;
-} */
+}
 /* Image */
 .robot-card__image-wrap {
   position: relative;
@@ -487,12 +499,17 @@ body {
 
 .robot-card__btn {
   background: none;
-  border: none;
-  padding: 0;
+  color: black;
+  border: solid 1px black;
+  border-radius: 15px;
+  padding: 8px;
+  width: 10rem;
+  /* border: none; */
+  /* padding: 0; */
   font-family: var(--font-body);
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--accent);
+  /* color: var(--accent); */
   cursor: pointer;
   transition:
     gap 0.2s,

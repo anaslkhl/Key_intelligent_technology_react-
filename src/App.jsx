@@ -289,8 +289,8 @@ function App() {
                 </span>
               </div>
               <div className="robot-card__body">
-                
               <h3 className="robot-card__name">{robot.name}</h3>
+                
                 <p className="robot-card__desc">{robot.description}</p>
                 <div className="robot-card__footer">
                   <button className="robot-card__btn">Learn More →</button>
