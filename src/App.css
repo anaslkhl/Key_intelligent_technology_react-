@@ -407,16 +407,7 @@ body {
     border-color 0.35s,
     box-shadow 0.35s;
 }
-/* .robot-card:hover .robot-card__glow {
-  border-color: color-mix(in srgb, var(--glow-color) 60%, transparent);
-  box-shadow: 0 0 24px -4px
-    color-mix(in srgb, var(--glow-color) 40%, transparent);
-} */
 
-/* .robot-card__desc {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}*/
 
 .robot-card:hover .robot-card__desc {
   opacity: 1;
